@@ -42,7 +42,9 @@ namespace HeadAndFoot.App
             this.LogMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContentPanel = new System.Windows.Forms.Panel();
+            this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.MenuStrip.SuspendLayout();
+            this.MainContentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuStrip
@@ -141,12 +143,22 @@ namespace HeadAndFoot.App
             // 
             this.MainContentPanel.AutoSize = true;
             this.MainContentPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.MainContentPanel.BackColor = System.Drawing.Color.Green;
+            this.MainContentPanel.BackColor = System.Drawing.Color.White;
+            this.MainContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MainContentPanel.Controls.Add(this.StatusStrip);
             this.MainContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainContentPanel.Location = new System.Drawing.Point(0, 24);
             this.MainContentPanel.Name = "MainContentPanel";
             this.MainContentPanel.Size = new System.Drawing.Size(589, 383);
             this.MainContentPanel.TabIndex = 1;
+            // 
+            // StatusStrip
+            // 
+            this.StatusStrip.Location = new System.Drawing.Point(0, 357);
+            this.StatusStrip.Name = "StatusStrip";
+            this.StatusStrip.Size = new System.Drawing.Size(585, 22);
+            this.StatusStrip.TabIndex = 0;
+            this.StatusStrip.Text = "statusStrip1";
             // 
             // ShellForm
             // 
@@ -161,6 +173,8 @@ namespace HeadAndFoot.App
             this.Text = "Head & Foot";
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
+            this.MainContentPanel.ResumeLayout(false);
+            this.MainContentPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +194,7 @@ namespace HeadAndFoot.App
         private System.Windows.Forms.ToolStripMenuItem FlatUIColorPickerMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LineSorterMenuItem;
         private System.Windows.Forms.Panel MainContentPanel;
+        private System.Windows.Forms.StatusStrip StatusStrip;
     }
 }
 

@@ -162,10 +162,6 @@
   <ItemGroup>
     <Content Include="Base\Assets\Attributions.txt" />
     <Content Include="Base\Assets\Icons\playing-cards.ico" />
-    <Content Include="Cards.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="playing-card.ico" />
     <Content Include="playing-cards.ico" />
   </ItemGroup>
   <ItemGroup>

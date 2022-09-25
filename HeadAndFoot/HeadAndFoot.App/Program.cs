@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace HeadAndFoot.App
@@ -12,9 +12,32 @@ namespace HeadAndFoot.App
         [STAThread]
         static void Main()
         {
+            //if (!VerifyEnvironment())
+            //{
+            //    //TODO: Something more graceful.
+            //    throw new Exception("This game is not designed for this operating system.");
+            //}
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ShellForm());
+        }
+
+        private static bool VerifyEnvironment()
+        {
+            OperatingSystem operatingSystem = Environment.OSVersion;
+            if (operatingSystem.Platform != PlatformID.Win32Windows)
+            {
+                return false;
+            }
+
+            //TODO: Don't hardcode "C" as the drive letter.
+            if (!File.Exists(@"C:\Windows\System\cards.dll"))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

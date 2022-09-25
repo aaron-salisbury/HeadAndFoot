@@ -36,6 +36,7 @@ namespace HeadAndFoot.App.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.Green;
             this.Name = "IntroductionUC";
             this.Size = new System.Drawing.Size(785, 400);
             this.ResumeLayout(false);
