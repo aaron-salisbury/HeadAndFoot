@@ -59,15 +59,5 @@ namespace HeadAndFoot.App.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Rye_Regular {
-            get {
-                object obj = ResourceManager.GetObject("Rye_Regular", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

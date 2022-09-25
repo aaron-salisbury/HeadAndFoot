@@ -48,7 +48,6 @@ namespace HeadAndFoot.App
             // MenuStrip
             // 
             this.MenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.MenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.MenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileMenuItem,
@@ -56,7 +55,8 @@ namespace HeadAndFoot.App
             this.HelpMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(1022, 35);
+            this.MenuStrip.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.MenuStrip.Size = new System.Drawing.Size(704, 24);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -66,20 +66,20 @@ namespace HeadAndFoot.App
             this.HomeMenuItem,
             this.ExitMenuItem});
             this.FileMenuItem.Name = "FileMenuItem";
-            this.FileMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.FileMenuItem.Size = new System.Drawing.Size(37, 22);
             this.FileMenuItem.Text = "&File";
             // 
             // HomeMenuItem
             // 
             this.HomeMenuItem.Name = "HomeMenuItem";
-            this.HomeMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.HomeMenuItem.Size = new System.Drawing.Size(107, 22);
             this.HomeMenuItem.Text = "&Home";
             this.HomeMenuItem.Click += new System.EventHandler(this.HomeMenuItem_Click);
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ExitMenuItem.Size = new System.Drawing.Size(107, 22);
             this.ExitMenuItem.Text = "E&xit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -90,27 +90,27 @@ namespace HeadAndFoot.App
             this.FlatUIColorPickerMenuItem,
             this.LineSorterMenuItem});
             this.ToolsMenuItem.Name = "ToolsMenuItem";
-            this.ToolsMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.ToolsMenuItem.Size = new System.Drawing.Size(46, 22);
             this.ToolsMenuItem.Text = "&Tools";
             // 
             // UUIDGeneratorMenuItem
             // 
             this.UUIDGeneratorMenuItem.Name = "UUIDGeneratorMenuItem";
-            this.UUIDGeneratorMenuItem.Size = new System.Drawing.Size(263, 34);
+            this.UUIDGeneratorMenuItem.Size = new System.Drawing.Size(174, 22);
             this.UUIDGeneratorMenuItem.Text = "&UUID Generator";
             this.UUIDGeneratorMenuItem.Click += new System.EventHandler(this.UUIDGeneratorMenuItem_Click);
             // 
             // FlatUIColorPickerMenuItem
             // 
             this.FlatUIColorPickerMenuItem.Name = "FlatUIColorPickerMenuItem";
-            this.FlatUIColorPickerMenuItem.Size = new System.Drawing.Size(263, 34);
+            this.FlatUIColorPickerMenuItem.Size = new System.Drawing.Size(174, 22);
             this.FlatUIColorPickerMenuItem.Text = "Flat UI &Color Picker";
             this.FlatUIColorPickerMenuItem.Click += new System.EventHandler(this.FlatUIColorPickerMenuItem_Click);
             // 
             // LineSorterMenuItem
             // 
             this.LineSorterMenuItem.Name = "LineSorterMenuItem";
-            this.LineSorterMenuItem.Size = new System.Drawing.Size(263, 34);
+            this.LineSorterMenuItem.Size = new System.Drawing.Size(174, 22);
             this.LineSorterMenuItem.Text = "Line Sorter";
             this.LineSorterMenuItem.Click += new System.EventHandler(this.LineSorterMenuItem_Click);
             // 
@@ -120,20 +120,20 @@ namespace HeadAndFoot.App
             this.LogMenuItem,
             this.AboutMenuItem});
             this.HelpMenuItem.Name = "HelpMenuItem";
-            this.HelpMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.HelpMenuItem.Size = new System.Drawing.Size(44, 22);
             this.HelpMenuItem.Text = "&Help";
             // 
             // LogMenuItem
             // 
             this.LogMenuItem.Name = "LogMenuItem";
-            this.LogMenuItem.Size = new System.Drawing.Size(164, 34);
+            this.LogMenuItem.Size = new System.Drawing.Size(107, 22);
             this.LogMenuItem.Text = "&Log";
             this.LogMenuItem.Click += new System.EventHandler(this.LogMenuItem_Click);
             // 
             // AboutMenuItem
             // 
             this.AboutMenuItem.Name = "AboutMenuItem";
-            this.AboutMenuItem.Size = new System.Drawing.Size(164, 34);
+            this.AboutMenuItem.Size = new System.Drawing.Size(107, 22);
             this.AboutMenuItem.Text = "&About";
             this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
@@ -143,22 +143,20 @@ namespace HeadAndFoot.App
             this.MainContentPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.MainContentPanel.BackColor = System.Drawing.Color.Green;
             this.MainContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainContentPanel.Location = new System.Drawing.Point(0, 35);
-            this.MainContentPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MainContentPanel.Location = new System.Drawing.Point(0, 24);
             this.MainContentPanel.Name = "MainContentPanel";
-            this.MainContentPanel.Size = new System.Drawing.Size(1022, 528);
+            this.MainContentPanel.Size = new System.Drawing.Size(704, 357);
             this.MainContentPanel.TabIndex = 1;
             // 
             // ShellForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 563);
+            this.ClientSize = new System.Drawing.Size(704, 381);
             this.Controls.Add(this.MainContentPanel);
             this.Controls.Add(this.MenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(536, 531);
+            this.MinimumSize = new System.Drawing.Size(363, 359);
             this.Name = "ShellForm";
             this.Text = "Head & Foot";
             this.MenuStrip.ResumeLayout(false);

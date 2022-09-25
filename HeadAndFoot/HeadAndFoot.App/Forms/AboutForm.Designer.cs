@@ -43,11 +43,10 @@ namespace HeadAndFoot.App.Forms
             // AppNameLabel
             // 
             this.AppNameLabel.AutoSize = true;
-            this.AppNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppNameLabel.Location = new System.Drawing.Point(18, 26);
-            this.AppNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AppNameLabel.Font = new System.Drawing.Font("Poor Richard", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppNameLabel.Location = new System.Drawing.Point(12, 17);
             this.AppNameLabel.Name = "AppNameLabel";
-            this.AppNameLabel.Size = new System.Drawing.Size(208, 46);
+            this.AppNameLabel.Size = new System.Drawing.Size(133, 31);
             this.AppNameLabel.TabIndex = 0;
             this.AppNameLabel.Text = "App Name";
             // 
@@ -57,18 +56,16 @@ namespace HeadAndFoot.App.Forms
             this.panel1.Controls.Add(this.AppNameLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 98);
+            this.panel1.Size = new System.Drawing.Size(432, 64);
             this.panel1.TabIndex = 1;
             // 
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(22, 153);
-            this.VersionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VersionLabel.Location = new System.Drawing.Point(15, 99);
             this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(106, 20);
+            this.VersionLabel.Size = new System.Drawing.Size(71, 13);
             this.VersionLabel.TabIndex = 2;
             this.VersionLabel.Text = "Version Label";
             // 
@@ -76,30 +73,27 @@ namespace HeadAndFoot.App.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 121);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 20);
+            this.label1.Size = new System.Drawing.Size(167, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "ABOUT THIS APPLICATION";
             // 
             // AppDescriptionLabel
             // 
             this.AppDescriptionLabel.AutoSize = true;
-            this.AppDescriptionLabel.Location = new System.Drawing.Point(22, 184);
-            this.AppDescriptionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AppDescriptionLabel.Location = new System.Drawing.Point(15, 120);
             this.AppDescriptionLabel.Name = "AppDescriptionLabel";
-            this.AppDescriptionLabel.Size = new System.Drawing.Size(165, 20);
+            this.AppDescriptionLabel.Size = new System.Drawing.Size(111, 13);
             this.AppDescriptionLabel.TabIndex = 4;
             this.AppDescriptionLabel.Text = "App Description Label";
             // 
             // AppLink
             // 
             this.AppLink.AutoSize = true;
-            this.AppLink.Location = new System.Drawing.Point(22, 218);
-            this.AppLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AppLink.Location = new System.Drawing.Point(15, 142);
             this.AppLink.Name = "AppLink";
-            this.AppLink.Size = new System.Drawing.Size(165, 20);
+            this.AppLink.Size = new System.Drawing.Size(113, 13);
             this.AppLink.TabIndex = 5;
             this.AppLink.TabStop = true;
             this.AppLink.Text = "Application Web Page";
@@ -108,10 +102,10 @@ namespace HeadAndFoot.App.Forms
             // OkButton
             // 
             this.OkButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.OkButton.Location = new System.Drawing.Point(513, 295);
+            this.OkButton.Location = new System.Drawing.Point(342, 192);
             this.OkButton.Margin = new System.Windows.Forms.Padding(0);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(112, 35);
+            this.OkButton.Size = new System.Drawing.Size(75, 23);
             this.OkButton.TabIndex = 6;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
@@ -119,10 +113,10 @@ namespace HeadAndFoot.App.Forms
             // 
             // AboutForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(642, 329);
+            this.ClientSize = new System.Drawing.Size(432, 225);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.AppLink);
             this.Controls.Add(this.AppDescriptionLabel);
@@ -130,11 +124,10 @@ namespace HeadAndFoot.App.Forms
             this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(664, 385);
+            this.MaximumSize = new System.Drawing.Size(448, 264);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(664, 385);
+            this.MinimumSize = new System.Drawing.Size(448, 264);
             this.Name = "AboutForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
