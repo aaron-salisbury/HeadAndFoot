@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 
 namespace HeadAndFoot.App
@@ -27,12 +26,6 @@ namespace HeadAndFoot.App
         {
             OperatingSystem operatingSystem = Environment.OSVersion;
             if (operatingSystem.Platform != PlatformID.Win32Windows)
-            {
-                return false;
-            }
-
-            //TODO: Don't hardcode "C" as the drive letter.
-            if (!File.Exists(@"C:\Windows\System\cards.dll"))
             {
                 return false;
             }
