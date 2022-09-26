@@ -160,7 +160,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Base\Assets\Attributions.txt" />
     <Content Include="Base\Assets\Icons\icon-256-16.ico" />
     <Content Include="Base\Assets\Icons\icon-256-32.ico" />
     <Content Include="Base\Assets\Icons\icon-256-48.ico" />
