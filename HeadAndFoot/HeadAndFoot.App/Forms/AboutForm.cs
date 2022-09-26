@@ -6,8 +6,8 @@ namespace HeadAndFoot.App.Forms
 {
     public partial class AboutForm : Form
     {
-        private const int MODAL_WIDTH = 450;
-        private const int MODAL_HIGHT = 270;
+        private const int MODAL_WIDTH = 361;
+        private const int MODAL_HIGHT = 289;
 
         public AboutForm()
         {
@@ -27,6 +27,8 @@ namespace HeadAndFoot.App.Forms
             Text = $"About {Properties.Settings.Default.ApplicationFriendlyName}";
             AppNameLabel.Text = Properties.Settings.Default.ApplicationFriendlyName.Replace("&", "&&");
             VersionLabel.Text = $"Version {Application.ProductVersion}";
+            CopyLabel.Text = $"Copyright (C) {Properties.Settings.Default.AboutCopyrightHolder}";
+            ByLabel.Text = $"by {Properties.Settings.Default.AboutLeadProgrammerName}";
             AppDescriptionLabel.Text = Properties.Settings.Default.AboutDescription;
         }
 

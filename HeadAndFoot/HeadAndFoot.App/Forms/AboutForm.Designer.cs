@@ -31,58 +31,39 @@ namespace HeadAndFoot.App.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.AppNameLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.VersionLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.AppDescriptionLabel = new System.Windows.Forms.Label();
             this.AppLink = new System.Windows.Forms.LinkLabel();
             this.OkButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.OSLabel = new System.Windows.Forms.Label();
+            this.CopyLabel = new System.Windows.Forms.Label();
+            this.Divider = new System.Windows.Forms.Label();
+            this.ByLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AppNameLabel
             // 
             this.AppNameLabel.AutoSize = true;
-            this.AppNameLabel.Font = new System.Drawing.Font("Poor Richard", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppNameLabel.Location = new System.Drawing.Point(12, 17);
+            this.AppNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.AppNameLabel.Location = new System.Drawing.Point(79, 18);
             this.AppNameLabel.Name = "AppNameLabel";
-            this.AppNameLabel.Size = new System.Drawing.Size(133, 31);
+            this.AppNameLabel.Size = new System.Drawing.Size(57, 13);
             this.AppNameLabel.TabIndex = 0;
             this.AppNameLabel.Text = "App Name";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.AppNameLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(432, 64);
-            this.panel1.TabIndex = 1;
             // 
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(15, 99);
+            this.VersionLabel.Location = new System.Drawing.Point(79, 34);
             this.VersionLabel.Name = "VersionLabel";
             this.VersionLabel.Size = new System.Drawing.Size(71, 13);
             this.VersionLabel.TabIndex = 2;
             this.VersionLabel.Text = "Version Label";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ABOUT THIS APPLICATION";
-            // 
             // AppDescriptionLabel
             // 
             this.AppDescriptionLabel.AutoSize = true;
-            this.AppDescriptionLabel.Location = new System.Drawing.Point(15, 120);
+            this.AppDescriptionLabel.Location = new System.Drawing.Point(81, 158);
             this.AppDescriptionLabel.Name = "AppDescriptionLabel";
             this.AppDescriptionLabel.Size = new System.Drawing.Size(111, 13);
             this.AppDescriptionLabel.TabIndex = 4;
@@ -91,7 +72,7 @@ namespace HeadAndFoot.App.Forms
             // AppLink
             // 
             this.AppLink.AutoSize = true;
-            this.AppLink.Location = new System.Drawing.Point(15, 142);
+            this.AppLink.Location = new System.Drawing.Point(81, 176);
             this.AppLink.Name = "AppLink";
             this.AppLink.Size = new System.Drawing.Size(113, 13);
             this.AppLink.TabIndex = 5;
@@ -102,7 +83,7 @@ namespace HeadAndFoot.App.Forms
             // OkButton
             // 
             this.OkButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.OkButton.Location = new System.Drawing.Point(342, 192);
+            this.OkButton.Location = new System.Drawing.Point(261, 218);
             this.OkButton.Margin = new System.Windows.Forms.Padding(0);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
@@ -111,29 +92,65 @@ namespace HeadAndFoot.App.Forms
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
+            // OSLabel
+            // 
+            this.OSLabel.AutoSize = true;
+            this.OSLabel.Location = new System.Drawing.Point(79, 50);
+            this.OSLabel.Name = "OSLabel";
+            this.OSLabel.Size = new System.Drawing.Size(66, 13);
+            this.OSLabel.TabIndex = 7;
+            this.OSLabel.Text = "Windows 98";
+            // 
+            // CopyLabel
+            // 
+            this.CopyLabel.AutoSize = true;
+            this.CopyLabel.Location = new System.Drawing.Point(79, 66);
+            this.CopyLabel.Name = "CopyLabel";
+            this.CopyLabel.Size = new System.Drawing.Size(67, 13);
+            this.CopyLabel.TabIndex = 8;
+            this.CopyLabel.Text = "Copyright (C)";
+            // 
+            // Divider
+            // 
+            this.Divider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Divider.Location = new System.Drawing.Point(82, 147);
+            this.Divider.Name = "Divider";
+            this.Divider.Size = new System.Drawing.Size(254, 2);
+            this.Divider.TabIndex = 9;
+            // 
+            // ByLabel
+            // 
+            this.ByLabel.AutoSize = true;
+            this.ByLabel.Location = new System.Drawing.Point(79, 82);
+            this.ByLabel.Name = "ByLabel";
+            this.ByLabel.Size = new System.Drawing.Size(21, 13);
+            this.ByLabel.TabIndex = 10;
+            this.ByLabel.Text = "by ";
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(432, 225);
+            this.ClientSize = new System.Drawing.Size(345, 250);
+            this.Controls.Add(this.ByLabel);
+            this.Controls.Add(this.Divider);
+            this.Controls.Add(this.CopyLabel);
+            this.Controls.Add(this.OSLabel);
+            this.Controls.Add(this.AppNameLabel);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.AppLink);
             this.Controls.Add(this.AppDescriptionLabel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.VersionLabel);
-            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(448, 264);
+            this.MaximumSize = new System.Drawing.Size(361, 289);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(448, 264);
+            this.MinimumSize = new System.Drawing.Size(361, 289);
             this.Name = "AboutForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,11 +159,13 @@ namespace HeadAndFoot.App.Forms
         #endregion
 
         private System.Windows.Forms.Label AppNameLabel;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label VersionLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label AppDescriptionLabel;
         private System.Windows.Forms.LinkLabel AppLink;
         private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Label OSLabel;
+        private System.Windows.Forms.Label CopyLabel;
+        private System.Windows.Forms.Label Divider;
+        private System.Windows.Forms.Label ByLabel;
     }
 }

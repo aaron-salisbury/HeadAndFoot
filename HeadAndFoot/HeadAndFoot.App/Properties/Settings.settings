@@ -11,5 +11,11 @@
     <Setting Name="ApplicationLink" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://github.com/aaron-salisbury/ProjectTemplates</Value>
     </Setting>
+    <Setting Name="AboutCopyrightHolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AmalgamateLabs</Value>
+    </Setting>
+    <Setting Name="AboutLeadProgrammerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Aaron Salisbury</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
