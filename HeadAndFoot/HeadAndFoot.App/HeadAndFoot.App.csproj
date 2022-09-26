@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>playing-cards.ico</ApplicationIcon>
+    <ApplicationIcon>icon-256-48.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LinqBridge, Version=1.3.0.0, Culture=neutral, PublicKeyToken=c2b14eb747628076, processorArchitecture=MSIL">
@@ -161,8 +161,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base\Assets\Attributions.txt" />
-    <Content Include="Base\Assets\Icons\playing-cards.ico" />
-    <Content Include="playing-cards.ico" />
+    <Content Include="Base\Assets\Icons\icon-256-16.ico" />
+    <Content Include="Base\Assets\Icons\icon-256-32.ico" />
+    <Content Include="Base\Assets\Icons\icon-256-48.ico" />
+    <Content Include="Base\Assets\logo.png" />
+    <Content Include="icon-256-48.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

@@ -6,8 +6,8 @@ namespace HeadAndFoot.App.Forms
 {
     public partial class AboutForm : Form
     {
-        private const int MODAL_WIDTH = 361;
-        private const int MODAL_HIGHT = 289;
+        private const int MODAL_WIDTH = 348;
+        private const int MODAL_HIGHT = 283;
 
         public AboutForm()
         {
@@ -24,10 +24,12 @@ namespace HeadAndFoot.App.Forms
             MaximumSize = modalSize;
             SizeGripStyle = SizeGripStyle.Hide;
 
+            string appName = Properties.Settings.Default.ApplicationFriendlyName.Replace("&", "&&");
+            string appVersion = Application.ProductVersion;
+
             Text = $"About {Properties.Settings.Default.ApplicationFriendlyName}";
-            AppNameLabel.Text = Properties.Settings.Default.ApplicationFriendlyName.Replace("&", "&&");
-            VersionLabel.Text = $"Version {Application.ProductVersion}";
-            CopyLabel.Text = $"Copyright (C) {Properties.Settings.Default.AboutCopyrightHolder}";
+            AppNameLabel.Text = $"{appName} | v. {appVersion}";
+            CopyLabel.Text = $"Copyright © {Properties.Settings.Default.AboutCopyrightHolder}";
             ByLabel.Text = $"by {Properties.Settings.Default.AboutLeadProgrammerName}";
             AppDescriptionLabel.Text = Properties.Settings.Default.AboutDescription;
         }
@@ -40,6 +42,11 @@ namespace HeadAndFoot.App.Forms
         private void OkButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
