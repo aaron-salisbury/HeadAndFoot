@@ -1,4 +1,5 @@
 ﻿using HeadAndFoot.App.Forms;
+using HeadAndFoot.Core;
 using HeadAndFoot.Core.Base;
 using System;
 using System.Windows.Forms;
@@ -7,6 +8,8 @@ namespace HeadAndFoot.App
 {
     public partial class ShellForm : Form
     {
+        public Manager GameManager { get; set; }
+
         private readonly Padding _defaultContentAreaPadding = new Padding(15);
         private LogUC _logUC;
 
@@ -19,6 +22,8 @@ namespace HeadAndFoot.App
             _logUC = new LogUC { Padding = _defaultContentAreaPadding, Dock = DockStyle.Fill };
             AppLogger.SetTargetInvoking(_logUC.UpdateLogs);
             _logUC.UpdateLogs(AppLogger.GetLogs()); // Load logs that may have been written before delegate could be set.
+
+            GameManager = new Manager();
 
             MainContentPanel.Controls.Add(new IntroductionUC { Padding = _defaultContentAreaPadding, Dock = DockStyle.Fill });
         }

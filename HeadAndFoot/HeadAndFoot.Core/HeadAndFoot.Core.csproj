@@ -50,6 +50,7 @@
     <Compile Include="Base\Logging\InvocableInMemoryTraceListener.cs" />
     <Compile Include="Base\ValidatableModel.cs" />
     <Compile Include="Data\CRUD.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleDataAccess\CRUD.cs" />
     <Compile Include="SampleTools\FlatColor.cs" />
