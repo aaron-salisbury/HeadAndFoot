@@ -32,10 +32,10 @@ namespace HeadAndFoot.App
 
             GameManager = new Manager();
 
-            Control intialContent = new IntroductionUC();
-            intialContent.Padding = _defaultContentAreaPadding;
-            intialContent.Dock = DockStyle.Fill;
-            MainContentPanel.Controls.Add(intialContent);
+            Control initialContent = new IntroductionUC();
+            initialContent.Padding = _defaultContentAreaPadding;
+            initialContent.Dock = DockStyle.Fill;
+            MainContentPanel.Controls.Add(initialContent);
         }
 
         private void HomeMenuItem_Click(object sender, EventArgs e)
