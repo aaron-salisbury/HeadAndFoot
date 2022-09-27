@@ -27,10 +27,10 @@ namespace HeadAndFoot.App.Forms
             string appName = Properties.Settings.Default.ApplicationFriendlyName.Replace("&", "&&");
             string appVersion = Application.ProductVersion;
 
-            Text = $"About {Properties.Settings.Default.ApplicationFriendlyName}";
-            AppNameLabel.Text = $"{appName}  |  v{appVersion}";
-            CopyLabel.Text = $"Copyright © {Properties.Settings.Default.AboutCopyrightHolder}";
-            ByLabel.Text = $"by {Properties.Settings.Default.AboutLeadProgrammerName}";
+            Text = string.Format("About {0}", Properties.Settings.Default.ApplicationFriendlyName);
+            AppNameLabel.Text = string.Format("{0}  |  v{1}", appName, appVersion);
+            CopyLabel.Text = string.Format("Copyright © {0}", Properties.Settings.Default.AboutCopyrightHolder);
+            ByLabel.Text = string.Format("by {0}", Properties.Settings.Default.AboutLeadProgrammerName);
             AppDescriptionLabel.Text = Properties.Settings.Default.AboutDescription;
         }
 
