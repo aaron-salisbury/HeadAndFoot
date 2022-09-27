@@ -32,20 +32,22 @@ namespace HeadAndFoot.App
 
             GameManager = new Manager();
 
-            Control initialContent = new IntroductionUC();
-            initialContent.Padding = _defaultContentAreaPadding;
-            initialContent.Dock = DockStyle.Fill;
-            MainContentPanel.Controls.Add(initialContent);
+            MainContentPanel.Controls.Add(GetHomeContent());
+        }
+
+        private Control GetHomeContent()
+        {
+            Control homeContent = new IntroductionUC();
+            homeContent.Padding = _defaultContentAreaPadding;
+            homeContent.Dock = DockStyle.Fill;
+
+            return homeContent;
         }
 
         private void HomeMenuItem_Click(object sender, EventArgs e)
         {
             MainContentPanel.Controls.Clear();
-
-            Control homeContent = new IntroductionUC();
-            homeContent.Padding = _defaultContentAreaPadding;
-            homeContent.Dock = DockStyle.Fill;
-            MainContentPanel.Controls.Add(homeContent);
+            MainContentPanel.Controls.Add(GetHomeContent());
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
