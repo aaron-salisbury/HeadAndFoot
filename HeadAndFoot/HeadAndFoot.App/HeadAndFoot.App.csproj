@@ -112,6 +112,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IntroductionUC.resx">
       <DependentUpon>IntroductionUC.cs</DependentUpon>
@@ -163,7 +164,8 @@
     <Content Include="Base\Assets\Icons\icon-256-16.ico" />
     <Content Include="Base\Assets\Icons\icon-256-32.ico" />
     <Content Include="Base\Assets\Icons\icon-256-48.ico" />
-    <Content Include="Base\Assets\logo.png" />
+    <Content Include="Base\Assets\logo-32.png" />
+    <Content Include="Base\Assets\logo-48.png" />
     <Content Include="icon-256-48.ico" />
   </ItemGroup>
   <ItemGroup>

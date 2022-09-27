@@ -28,7 +28,7 @@ namespace HeadAndFoot.App.Forms
             string appVersion = Application.ProductVersion;
 
             Text = $"About {Properties.Settings.Default.ApplicationFriendlyName}";
-            AppNameLabel.Text = $"{appName} | v. {appVersion}";
+            AppNameLabel.Text = $"{appName}  |  v{appVersion}";
             CopyLabel.Text = $"Copyright © {Properties.Settings.Default.AboutCopyrightHolder}";
             ByLabel.Text = $"by {Properties.Settings.Default.AboutLeadProgrammerName}";
             AppDescriptionLabel.Text = Properties.Settings.Default.AboutDescription;
@@ -42,11 +42,6 @@ namespace HeadAndFoot.App.Forms
         private void OkButton_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void AboutForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

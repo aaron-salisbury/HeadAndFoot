@@ -10,14 +10,14 @@ namespace HeadAndFoot.Core.SampleTools
         private bool _capitalize;
         public bool Capitalize
         {
-            get => _capitalize;
+            get { return _capitalize; }
             set { _capitalize = value; }
         }
 
         private string _uUID;
         public string UUID
         {
-            get => _uUID;
+            get { return _uUID; }
             set { _uUID = value; }
         }
 
@@ -33,7 +33,7 @@ namespace HeadAndFoot.Core.SampleTools
                     ? newGuid.ToString().ToUpper()
                     : newGuid.ToString();
 
-                AppLogger.Write($"Generated new UUID, {UUID}", AppLogger.LogCategories.Information);
+                AppLogger.Write(string.Format("Generated new UUID, {0}", UUID), AppLogger.LogCategories.Information);
                 return true;
             }
             catch (Exception e)

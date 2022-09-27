@@ -74,7 +74,7 @@ namespace HeadAndFoot.App.Forms
             // 
             // OkButton
             // 
-            this.OkButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OkButton.Location = new System.Drawing.Point(248, 212);
             this.OkButton.Margin = new System.Windows.Forms.Padding(0);
             this.OkButton.Name = "OkButton";
@@ -122,13 +122,13 @@ namespace HeadAndFoot.App.Forms
             // LogoPictureBox
             // 
             this.LogoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.LogoPictureBox.BackgroundImage = global::HeadAndFoot.App.Properties.Resources.logo;
+            this.LogoPictureBox.BackgroundImage = global::HeadAndFoot.App.Properties.Resources.logo_32;
             this.LogoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoPictureBox.ErrorImage = null;
-            this.LogoPictureBox.InitialImage = global::HeadAndFoot.App.Properties.Resources.logo;
+            this.LogoPictureBox.InitialImage = null;
             this.LogoPictureBox.Location = new System.Drawing.Point(13, 13);
             this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(48, 48);
+            this.LogoPictureBox.Size = new System.Drawing.Size(32, 32);
             this.LogoPictureBox.TabIndex = 11;
             this.LogoPictureBox.TabStop = false;
             // 
@@ -156,7 +156,6 @@ namespace HeadAndFoot.App.Forms
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
-            this.Load += new System.EventHandler(this.AboutForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
