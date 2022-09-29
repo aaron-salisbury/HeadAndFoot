@@ -17,5 +17,8 @@
     <Setting Name="AboutLeadProgrammerName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Aaron Salisbury</Value>
     </Setting>
+    <Setting Name="GameRulesLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://gamerules.com/rules/hand-and-foot-card-game/</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

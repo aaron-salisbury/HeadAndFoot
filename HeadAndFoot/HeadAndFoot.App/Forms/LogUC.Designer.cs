@@ -46,9 +46,10 @@ namespace HeadAndFoot.App.Forms
             // 
             // LogsTextBox
             // 
-            this.LogsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.LogsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogsTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.LogsTextBox.Location = new System.Drawing.Point(3, 30);
             this.LogsTextBox.Multiline = true;
             this.LogsTextBox.Name = "LogsTextBox";

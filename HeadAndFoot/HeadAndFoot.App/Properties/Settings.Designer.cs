@@ -82,5 +82,17 @@ namespace HeadAndFoot.App.Properties {
                 this["AboutLeadProgrammerName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://gamerules.com/rules/hand-and-foot-card-game/")]
+        public string GameRulesLink {
+            get {
+                return ((string)(this["GameRulesLink"]));
+            }
+            set {
+                this["GameRulesLink"] = value;
+            }
+        }
     }
 }

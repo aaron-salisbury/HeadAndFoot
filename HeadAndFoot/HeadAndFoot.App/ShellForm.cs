@@ -23,15 +23,16 @@ namespace HeadAndFoot.App
             InitializeComponent();
 
             Text = Properties.Settings.Default.ApplicationFriendlyName;
+            this.AboutMenuItem.Text = string.Format("&About {0}", Properties.Settings.Default.ApplicationFriendlyName.Replace("&", "&&"));
 
             _logUC = new LogUC();
             EstablishLogging();
 
-            RemoveDefaultFileMenuImageMargins();
+            ModifyMenus();
 
             GameManager = new Manager();
 
-            MainContentPanel.Controls.Add(GetHomeContent());
+            MainContentPanel.Controls.Add(GetNewDeal());
         }
 
         private void EstablishLogging()
@@ -42,14 +43,17 @@ namespace HeadAndFoot.App
             _logUC.UpdateLogs(AppLogger.GetLogs()); // Load logs that may have been written before delegate could be set.
         }
 
-        private void RemoveDefaultFileMenuImageMargins()
+        private void ModifyMenus()
         {
-            ((ToolStripDropDownMenu)this.FileMenuItem.DropDown).ShowImageMargin = false;
+            ((ToolStripDropDownMenu)this.GameMenuItem.DropDown).ShowImageMargin = false;
             ((ToolStripDropDownMenu)this.ToolsMenuItem.DropDown).ShowImageMargin = false;
             ((ToolStripDropDownMenu)this.HelpMenuItem.DropDown).ShowImageMargin = false;
+
+            this.GameMenuItem.DropDownItems.Insert(this.GameMenuItem.DropDownItems.Count - 1, new ToolStripSeparator());
+            this.HelpMenuItem.DropDownItems.Insert(this.HelpMenuItem.DropDownItems.Count - 1, new ToolStripSeparator());
         }
 
-        private Control GetHomeContent()
+        private Control GetNewDeal()
         {
             Control homeContent = new IntroductionUC();
             homeContent.Padding = _defaultContentAreaPadding;
@@ -58,10 +62,10 @@ namespace HeadAndFoot.App
             return homeContent;
         }
 
-        private void HomeMenuItem_Click(object sender, EventArgs e)
+        private void DealMenuItem_Click(object sender, EventArgs e)
         {
             MainContentPanel.Controls.Clear();
-            MainContentPanel.Controls.Add(GetHomeContent());
+            MainContentPanel.Controls.Add(GetNewDeal());
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +100,11 @@ namespace HeadAndFoot.App
             lineSorter.Padding = _defaultContentAreaPadding;
             lineSorter.Dock = DockStyle.Fill;
             MainContentPanel.Controls.Add(lineSorter);
+        }
+
+        private void RulesMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Properties.Settings.Default.GameRulesLink);
         }
 
         private void LogMenuItem_Click(object sender, EventArgs e)

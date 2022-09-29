@@ -31,8 +31,8 @@ namespace HeadAndFoot.App
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShellForm));
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
-            this.FileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HomeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GameMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DealMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UUIDGeneratorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +40,7 @@ namespace HeadAndFoot.App
             this.LineSorterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RulesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContentPanel = new System.Windows.Forms.Panel();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
@@ -52,7 +53,7 @@ namespace HeadAndFoot.App
             this.MenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.MenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileMenuItem,
+            this.GameMenuItem,
             this.ToolsMenuItem,
             this.HelpMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
@@ -62,26 +63,26 @@ namespace HeadAndFoot.App
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "menuStrip1";
             // 
-            // FileMenuItem
+            // GameMenuItem
             // 
-            this.FileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HomeMenuItem,
+            this.GameMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DealMenuItem,
             this.ExitMenuItem});
-            this.FileMenuItem.Name = "FileMenuItem";
-            this.FileMenuItem.Size = new System.Drawing.Size(37, 22);
-            this.FileMenuItem.Text = "&File";
+            this.GameMenuItem.Name = "GameMenuItem";
+            this.GameMenuItem.Size = new System.Drawing.Size(50, 22);
+            this.GameMenuItem.Text = "&Game";
             // 
-            // HomeMenuItem
+            // DealMenuItem
             // 
-            this.HomeMenuItem.Name = "HomeMenuItem";
-            this.HomeMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.HomeMenuItem.Text = "&Home";
-            this.HomeMenuItem.Click += new System.EventHandler(this.HomeMenuItem_Click);
+            this.DealMenuItem.Name = "DealMenuItem";
+            this.DealMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.DealMenuItem.Text = "&Deal";
+            this.DealMenuItem.Click += new System.EventHandler(this.DealMenuItem_Click);
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.ExitMenuItem.Size = new System.Drawing.Size(97, 22);
             this.ExitMenuItem.Text = "E&xit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -119,6 +120,7 @@ namespace HeadAndFoot.App
             // HelpMenuItem
             // 
             this.HelpMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RulesMenuItem,
             this.LogMenuItem,
             this.AboutMenuItem});
             this.HelpMenuItem.Name = "HelpMenuItem";
@@ -128,14 +130,21 @@ namespace HeadAndFoot.App
             // LogMenuItem
             // 
             this.LogMenuItem.Name = "LogMenuItem";
-            this.LogMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.LogMenuItem.Size = new System.Drawing.Size(180, 22);
             this.LogMenuItem.Text = "&Log";
             this.LogMenuItem.Click += new System.EventHandler(this.LogMenuItem_Click);
+            // 
+            // RulesMenuItem
+            // 
+            this.RulesMenuItem.Name = "RulesMenuItem";
+            this.RulesMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RulesMenuItem.Text = "&Rules";
+            this.RulesMenuItem.Click += new System.EventHandler(this.RulesMenuItem_Click);
             // 
             // AboutMenuItem
             // 
             this.AboutMenuItem.Name = "AboutMenuItem";
-            this.AboutMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.AboutMenuItem.Size = new System.Drawing.Size(180, 22);
             this.AboutMenuItem.Text = "&About";
             this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
@@ -143,7 +152,7 @@ namespace HeadAndFoot.App
             // 
             this.MainContentPanel.AutoSize = true;
             this.MainContentPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.MainContentPanel.BackColor = System.Drawing.Color.White;
+            this.MainContentPanel.BackColor = System.Drawing.SystemColors.Control;
             this.MainContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MainContentPanel.Controls.Add(this.StatusStrip);
             this.MainContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -183,8 +192,8 @@ namespace HeadAndFoot.App
         #endregion
 
         private System.Windows.Forms.MenuStrip MenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem FileMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem HomeMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GameMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DealMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ExitMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HelpMenuItem;
@@ -195,6 +204,7 @@ namespace HeadAndFoot.App
         private System.Windows.Forms.ToolStripMenuItem LineSorterMenuItem;
         private System.Windows.Forms.Panel MainContentPanel;
         private System.Windows.Forms.StatusStrip StatusStrip;
+        private System.Windows.Forms.ToolStripMenuItem RulesMenuItem;
     }
 }
 
