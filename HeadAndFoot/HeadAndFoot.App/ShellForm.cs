@@ -57,6 +57,7 @@ namespace HeadAndFoot.App
             helpDropDown.ShowImageMargin = false;
             helpDropDown.BackColor = System.Drawing.SystemColors.ControlLightLight;
 
+            this.GameMenuItem.DropDownItems.Insert(1, new ToolStripSeparator());
             this.GameMenuItem.DropDownItems.Insert(this.GameMenuItem.DropDownItems.Count - 1, new ToolStripSeparator());
             this.HelpMenuItem.DropDownItems.Insert(this.HelpMenuItem.DropDownItems.Count - 1, new ToolStripSeparator());
         }

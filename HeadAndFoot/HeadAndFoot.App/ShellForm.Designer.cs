@@ -39,11 +39,14 @@ namespace HeadAndFoot.App
             this.FlatUIColorPickerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LineSorterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LogMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RulesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContentPanel = new System.Windows.Forms.Panel();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
+            this.UndoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeckMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.MainContentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +70,9 @@ namespace HeadAndFoot.App
             // 
             this.GameMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DealMenuItem,
+            this.UndoMenuItem,
+            this.DeckMenuItem,
+            this.OptionsMenuItem,
             this.ExitMenuItem});
             this.GameMenuItem.Name = "GameMenuItem";
             this.GameMenuItem.Size = new System.Drawing.Size(50, 22);
@@ -75,14 +81,14 @@ namespace HeadAndFoot.App
             // DealMenuItem
             // 
             this.DealMenuItem.Name = "DealMenuItem";
-            this.DealMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.DealMenuItem.Size = new System.Drawing.Size(125, 22);
             this.DealMenuItem.Text = "&Deal";
             this.DealMenuItem.Click += new System.EventHandler(this.DealMenuItem_Click);
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.ExitMenuItem.Size = new System.Drawing.Size(125, 22);
             this.ExitMenuItem.Text = "E&xit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -127,24 +133,24 @@ namespace HeadAndFoot.App
             this.HelpMenuItem.Size = new System.Drawing.Size(44, 22);
             this.HelpMenuItem.Text = "&Help";
             // 
-            // LogMenuItem
-            // 
-            this.LogMenuItem.Name = "LogMenuItem";
-            this.LogMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.LogMenuItem.Text = "&Log";
-            this.LogMenuItem.Click += new System.EventHandler(this.LogMenuItem_Click);
-            // 
             // RulesMenuItem
             // 
             this.RulesMenuItem.Name = "RulesMenuItem";
-            this.RulesMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RulesMenuItem.Size = new System.Drawing.Size(107, 22);
             this.RulesMenuItem.Text = "&Rules";
             this.RulesMenuItem.Click += new System.EventHandler(this.RulesMenuItem_Click);
+            // 
+            // LogMenuItem
+            // 
+            this.LogMenuItem.Name = "LogMenuItem";
+            this.LogMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.LogMenuItem.Text = "&Log...";
+            this.LogMenuItem.Click += new System.EventHandler(this.LogMenuItem_Click);
             // 
             // AboutMenuItem
             // 
             this.AboutMenuItem.Name = "AboutMenuItem";
-            this.AboutMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AboutMenuItem.Size = new System.Drawing.Size(107, 22);
             this.AboutMenuItem.Text = "&About";
             this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
@@ -168,6 +174,25 @@ namespace HeadAndFoot.App
             this.StatusStrip.Size = new System.Drawing.Size(585, 22);
             this.StatusStrip.TabIndex = 0;
             this.StatusStrip.Text = "statusStrip1";
+            // 
+            // UndoMenuItem
+            // 
+            this.UndoMenuItem.Enabled = false;
+            this.UndoMenuItem.Name = "UndoMenuItem";
+            this.UndoMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.UndoMenuItem.Text = "&Undo";
+            // 
+            // DeckMenuItem
+            // 
+            this.DeckMenuItem.Name = "DeckMenuItem";
+            this.DeckMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.DeckMenuItem.Text = "De&ck...";
+            // 
+            // OptionsMenuItem
+            // 
+            this.OptionsMenuItem.Name = "OptionsMenuItem";
+            this.OptionsMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.OptionsMenuItem.Text = "&Options...";
             // 
             // ShellForm
             // 
@@ -205,6 +230,9 @@ namespace HeadAndFoot.App
         private System.Windows.Forms.Panel MainContentPanel;
         private System.Windows.Forms.StatusStrip StatusStrip;
         private System.Windows.Forms.ToolStripMenuItem RulesMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UndoMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DeckMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OptionsMenuItem;
     }
 }
 
