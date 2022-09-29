@@ -45,9 +45,17 @@ namespace HeadAndFoot.App
 
         private void ModifyMenus()
         {
-            ((ToolStripDropDownMenu)this.GameMenuItem.DropDown).ShowImageMargin = false;
-            ((ToolStripDropDownMenu)this.ToolsMenuItem.DropDown).ShowImageMargin = false;
-            ((ToolStripDropDownMenu)this.HelpMenuItem.DropDown).ShowImageMargin = false;
+            ToolStripDropDownMenu gameDropDown = (ToolStripDropDownMenu)this.GameMenuItem.DropDown;
+            gameDropDown.ShowImageMargin = false;
+            gameDropDown.BackColor = System.Drawing.SystemColors.ControlLightLight;
+
+            ToolStripDropDownMenu toolsDropDown = (ToolStripDropDownMenu)this.ToolsMenuItem.DropDown;
+            toolsDropDown.ShowImageMargin = false;
+            toolsDropDown.BackColor = System.Drawing.SystemColors.ControlLightLight;
+
+            ToolStripDropDownMenu helpDropDown = (ToolStripDropDownMenu)this.HelpMenuItem.DropDown;
+            helpDropDown.ShowImageMargin = false;
+            helpDropDown.BackColor = System.Drawing.SystemColors.ControlLightLight;
 
             this.GameMenuItem.DropDownItems.Insert(this.GameMenuItem.DropDownItems.Count - 1, new ToolStripSeparator());
             this.HelpMenuItem.DropDownItems.Insert(this.HelpMenuItem.DropDownItems.Count - 1, new ToolStripSeparator());
