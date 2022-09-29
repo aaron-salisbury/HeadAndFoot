@@ -25,14 +25,28 @@ namespace HeadAndFoot.App
             Text = Properties.Settings.Default.ApplicationFriendlyName;
 
             _logUC = new LogUC();
-            _logUC.Padding = _defaultContentAreaPadding;
-            _logUC.Dock = DockStyle.Fill;
-            AppLogger.SetTargetInvoking(_logUC.UpdateLogs);
-            _logUC.UpdateLogs(AppLogger.GetLogs()); // Load logs that may have been written before delegate could be set.
+            EstablishLogging();
+
+            RemoveDefaultFileMenuImageMargins();
 
             GameManager = new Manager();
 
             MainContentPanel.Controls.Add(GetHomeContent());
+        }
+
+        private void EstablishLogging()
+        {
+            _logUC.Padding = _defaultContentAreaPadding;
+            _logUC.Dock = DockStyle.Fill;
+            AppLogger.SetTargetInvoking(_logUC.UpdateLogs);
+            _logUC.UpdateLogs(AppLogger.GetLogs()); // Load logs that may have been written before delegate could be set.
+        }
+
+        private void RemoveDefaultFileMenuImageMargins()
+        {
+            ((ToolStripDropDownMenu)this.FileMenuItem.DropDown).ShowImageMargin = false;
+            ((ToolStripDropDownMenu)this.ToolsMenuItem.DropDown).ShowImageMargin = false;
+            ((ToolStripDropDownMenu)this.HelpMenuItem.DropDown).ShowImageMargin = false;
         }
 
         private Control GetHomeContent()

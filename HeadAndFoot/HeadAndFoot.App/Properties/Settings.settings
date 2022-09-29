@@ -9,7 +9,7 @@
       <Value Profile="(Default)">Play the family favorite card game Head &amp;&amp; Foot.</Value>
     </Setting>
     <Setting Name="ApplicationLink" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://github.com/aaron-salisbury/ProjectTemplates</Value>
+      <Value Profile="(Default)">https://github.com/aaron-salisbury/HeadAndFoot</Value>
     </Setting>
     <Setting Name="AboutCopyrightHolder" Type="System.String" Scope="User">
       <Value Profile="(Default)">AmalgamateLabs</Value>
