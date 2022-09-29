@@ -1,4 +1,5 @@
-﻿using HeadAndFoot.App.Forms;
+﻿using HeadAndFoot.App.Base;
+using HeadAndFoot.App.Forms;
 using HeadAndFoot.Core;
 using HeadAndFoot.Core.Base;
 using System;
@@ -45,17 +46,16 @@ namespace HeadAndFoot.App
 
         private void ModifyMenus()
         {
-            ToolStripDropDownMenu gameDropDown = (ToolStripDropDownMenu)this.GameMenuItem.DropDown;
-            gameDropDown.ShowImageMargin = false;
-            gameDropDown.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            //TODO: The following Windows 98 aesthetics.
+            // Detached drop downs.
+            // 3D / darker tool strip separator.
+            // Centered, but still left justified, menu item text and tool strip separator.
 
-            ToolStripDropDownMenu toolsDropDown = (ToolStripDropDownMenu)this.ToolsMenuItem.DropDown;
-            toolsDropDown.ShowImageMargin = false;
-            toolsDropDown.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MenuStrip.Renderer = new ToolStripProfessionalRenderer(new MenuStripColorTable());
 
-            ToolStripDropDownMenu helpDropDown = (ToolStripDropDownMenu)this.HelpMenuItem.DropDown;
-            helpDropDown.ShowImageMargin = false;
-            helpDropDown.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            ((ToolStripDropDownMenu)this.GameMenuItem.DropDown).ShowImageMargin = false;
+            ((ToolStripDropDownMenu)this.ToolsMenuItem.DropDown).ShowImageMargin = false;
+            ((ToolStripDropDownMenu)this.HelpMenuItem.DropDown).ShowImageMargin = false;
 
             this.GameMenuItem.DropDownItems.Insert(1, new ToolStripSeparator());
             this.GameMenuItem.DropDownItems.Insert(this.GameMenuItem.DropDownItems.Count - 1, new ToolStripSeparator());
