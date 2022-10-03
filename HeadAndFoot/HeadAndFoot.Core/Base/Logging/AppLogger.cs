@@ -1,5 +1,4 @@
-﻿using HeadAndFoot.Core.Base.Logging;
-using Microsoft.Practices.EnterpriseLibrary.Logging;
+﻿using Microsoft.Practices.EnterpriseLibrary.Logging;
 using Microsoft.Practices.EnterpriseLibrary.Logging.Filters;
 using Microsoft.Practices.EnterpriseLibrary.Logging.Formatters;
 using System;
@@ -7,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace HeadAndFoot.Core.Base
+namespace HeadAndFoot.Core.Base.Logging
 {
     // http://codebetter.com/davidhayden/2006/02/19/enterprise-library-2-0-logging-application-block/
     public static class AppLogger
