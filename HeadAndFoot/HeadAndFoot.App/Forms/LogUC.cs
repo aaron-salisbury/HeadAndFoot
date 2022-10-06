@@ -1,4 +1,4 @@
-﻿using HeadAndFoot.Core.Base;
+﻿using HeadAndFoot.Core.Base.Logging;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;

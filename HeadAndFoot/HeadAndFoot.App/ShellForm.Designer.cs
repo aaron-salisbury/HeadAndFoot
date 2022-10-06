@@ -37,10 +37,6 @@ namespace HeadAndFoot.App
             this.DeckMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OptionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UUIDGeneratorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FlatUIColorPickerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LineSorterMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RulesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +52,6 @@ namespace HeadAndFoot.App
             this.MenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.GameMenuItem,
-            this.ToolsMenuItem,
             this.HelpMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
@@ -80,7 +75,7 @@ namespace HeadAndFoot.App
             // DealMenuItem
             // 
             this.DealMenuItem.Name = "DealMenuItem";
-            this.DealMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.DealMenuItem.Size = new System.Drawing.Size(125, 22);
             this.DealMenuItem.Text = "&Deal";
             this.DealMenuItem.Click += new System.EventHandler(this.DealMenuItem_Click);
             // 
@@ -88,58 +83,27 @@ namespace HeadAndFoot.App
             // 
             this.UndoMenuItem.Enabled = false;
             this.UndoMenuItem.Name = "UndoMenuItem";
-            this.UndoMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.UndoMenuItem.Size = new System.Drawing.Size(125, 22);
             this.UndoMenuItem.Text = "&Undo";
             // 
             // DeckMenuItem
             // 
             this.DeckMenuItem.Name = "DeckMenuItem";
-            this.DeckMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.DeckMenuItem.Size = new System.Drawing.Size(125, 22);
             this.DeckMenuItem.Text = "De&ck...";
             // 
             // OptionsMenuItem
             // 
             this.OptionsMenuItem.Name = "OptionsMenuItem";
-            this.OptionsMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OptionsMenuItem.Size = new System.Drawing.Size(125, 22);
             this.OptionsMenuItem.Text = "&Options...";
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ExitMenuItem.Size = new System.Drawing.Size(125, 22);
             this.ExitMenuItem.Text = "E&xit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
-            // 
-            // ToolsMenuItem
-            // 
-            this.ToolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UUIDGeneratorMenuItem,
-            this.FlatUIColorPickerMenuItem,
-            this.LineSorterMenuItem});
-            this.ToolsMenuItem.Name = "ToolsMenuItem";
-            this.ToolsMenuItem.Size = new System.Drawing.Size(46, 22);
-            this.ToolsMenuItem.Text = "&Tools";
-            // 
-            // UUIDGeneratorMenuItem
-            // 
-            this.UUIDGeneratorMenuItem.Name = "UUIDGeneratorMenuItem";
-            this.UUIDGeneratorMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.UUIDGeneratorMenuItem.Text = "&UUID Generator";
-            this.UUIDGeneratorMenuItem.Click += new System.EventHandler(this.UUIDGeneratorMenuItem_Click);
-            // 
-            // FlatUIColorPickerMenuItem
-            // 
-            this.FlatUIColorPickerMenuItem.Name = "FlatUIColorPickerMenuItem";
-            this.FlatUIColorPickerMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.FlatUIColorPickerMenuItem.Text = "Flat UI &Color Picker";
-            this.FlatUIColorPickerMenuItem.Click += new System.EventHandler(this.FlatUIColorPickerMenuItem_Click);
-            // 
-            // LineSorterMenuItem
-            // 
-            this.LineSorterMenuItem.Name = "LineSorterMenuItem";
-            this.LineSorterMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.LineSorterMenuItem.Text = "Line Sorter";
-            this.LineSorterMenuItem.Click += new System.EventHandler(this.LineSorterMenuItem_Click);
             // 
             // HelpMenuItem
             // 
@@ -154,21 +118,21 @@ namespace HeadAndFoot.App
             // RulesMenuItem
             // 
             this.RulesMenuItem.Name = "RulesMenuItem";
-            this.RulesMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RulesMenuItem.Size = new System.Drawing.Size(107, 22);
             this.RulesMenuItem.Text = "&Rules";
             this.RulesMenuItem.Click += new System.EventHandler(this.RulesMenuItem_Click);
             // 
             // LogMenuItem
             // 
             this.LogMenuItem.Name = "LogMenuItem";
-            this.LogMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LogMenuItem.Size = new System.Drawing.Size(107, 22);
             this.LogMenuItem.Text = "&Log...";
             this.LogMenuItem.Click += new System.EventHandler(this.LogMenuItem_Click);
             // 
             // AboutMenuItem
             // 
             this.AboutMenuItem.Name = "AboutMenuItem";
-            this.AboutMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AboutMenuItem.Size = new System.Drawing.Size(107, 22);
             this.AboutMenuItem.Text = "&About";
             this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
@@ -217,13 +181,9 @@ namespace HeadAndFoot.App
         private System.Windows.Forms.ToolStripMenuItem GameMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DealMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ExitMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HelpMenuItem;
         private System.Windows.Forms.ToolStripMenuItem LogMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem UUIDGeneratorMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem FlatUIColorPickerMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem LineSorterMenuItem;
         private System.Windows.Forms.Panel MainContentPanel;
         private System.Windows.Forms.ToolStripMenuItem RulesMenuItem;
         private System.Windows.Forms.ToolStripMenuItem UndoMenuItem;

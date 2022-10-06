@@ -88,24 +88,6 @@
     <Compile Include="Forms\LogUC.Designer.cs">
       <DependentUpon>LogUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SampleTools\FlatUIColorPickerUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\SampleTools\FlatUIColorPickerUC.Designer.cs">
-      <DependentUpon>FlatUIColorPickerUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SampleTools\LineSorterUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\SampleTools\LineSorterUC.Designer.cs">
-      <DependentUpon>LineSorterUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SampleTools\UUIDGeneratorUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\SampleTools\UUIDGeneratorUC.Designer.cs">
-      <DependentUpon>UUIDGeneratorUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="ShellForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,15 +105,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LogUC.resx">
       <DependentUpon>LogUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SampleTools\FlatUIColorPickerUC.resx">
-      <DependentUpon>FlatUIColorPickerUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SampleTools\LineSorterUC.resx">
-      <DependentUpon>LineSorterUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SampleTools\UUIDGeneratorUC.resx">
-      <DependentUpon>UUIDGeneratorUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

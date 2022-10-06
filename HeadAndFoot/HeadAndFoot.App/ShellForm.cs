@@ -1,7 +1,7 @@
 ﻿using HeadAndFoot.App.Base;
 using HeadAndFoot.App.Forms;
 using HeadAndFoot.Core;
-using HeadAndFoot.Core.Base;
+using HeadAndFoot.Core.Base.Logging;
 using System;
 using System.Windows.Forms;
 
@@ -54,7 +54,6 @@ namespace HeadAndFoot.App
             this.MenuStrip.Renderer = new ToolStripProfessionalRenderer(new MenuStripColorTable());
 
             ((ToolStripDropDownMenu)this.GameMenuItem.DropDown).ShowImageMargin = false;
-            ((ToolStripDropDownMenu)this.ToolsMenuItem.DropDown).ShowImageMargin = false;
             ((ToolStripDropDownMenu)this.HelpMenuItem.DropDown).ShowImageMargin = false;
 
             this.GameMenuItem.DropDownItems.Insert(1, new ToolStripSeparator());
@@ -80,35 +79,6 @@ namespace HeadAndFoot.App
         private void ExitMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void UUIDGeneratorMenuItem_Click(object sender, EventArgs e)
-        {
-            MainContentPanel.Controls.Clear();
-
-            Control generator = new Forms.SampleTools.UUIDGeneratorUC();
-            generator.Padding = _defaultContentAreaPadding;
-            MainContentPanel.Controls.Add(generator);
-        }
-
-        private void FlatUIColorPickerMenuItem_Click(object sender, EventArgs e)
-        {
-            MainContentPanel.Controls.Clear();
-
-            Control colorPicker = new Forms.SampleTools.FlatUIColorPickerUC();
-            colorPicker.Padding = _defaultContentAreaPadding;
-            colorPicker.Dock = DockStyle.Fill;
-            MainContentPanel.Controls.Add(colorPicker);
-        }
-
-        private void LineSorterMenuItem_Click(object sender, EventArgs e)
-        {
-            MainContentPanel.Controls.Clear();
-
-            Control lineSorter = new Forms.SampleTools.LineSorterUC();
-            lineSorter.Padding = _defaultContentAreaPadding;
-            lineSorter.Dock = DockStyle.Fill;
-            MainContentPanel.Controls.Add(lineSorter);
         }
 
         private void RulesMenuItem_Click(object sender, EventArgs e)
