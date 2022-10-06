@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon-256-48.ico</ApplicationIcon>
+    <ApplicationIcon>headandfoot_icon_64.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Costura, Version=1.6.2.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
@@ -144,12 +144,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base\Assets\Icons\headandfoot_icon_64.ico" />
     <Content Include="Base\Assets\Icons\icon-256-16.ico" />
     <Content Include="Base\Assets\Icons\icon-256-32.ico" />
     <Content Include="Base\Assets\Icons\icon-256-48.ico" />
     <Content Include="Base\Assets\logo-32.png" />
     <Content Include="Base\Assets\logo-48.png" />
     <None Include="FodyWeavers.xml" />
+    <Content Include="headandfoot_icon_64.ico" />
     <Content Include="icon-256-48.ico" />
   </ItemGroup>
   <ItemGroup>
