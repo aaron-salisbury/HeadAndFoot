@@ -58,7 +58,7 @@ namespace HeadAndFoot.App
 
         private Control GetNewDeal()
         {
-            Control homeContent = new IntroductionUC();
+            Control homeContent = new GameBoardUC();
             homeContent.Padding = _defaultContentAreaPadding;
             homeContent.Dock = DockStyle.Fill;
 

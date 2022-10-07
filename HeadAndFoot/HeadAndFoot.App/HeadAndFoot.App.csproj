@@ -88,11 +88,11 @@
     <Compile Include="Forms\DeckSelectionForm.Designer.cs">
       <DependentUpon>DeckSelectionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\IntroductionUC.cs">
+    <Compile Include="Forms\GameBoardUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\IntroductionUC.Designer.cs">
-      <DependentUpon>IntroductionUC.cs</DependentUpon>
+    <Compile Include="Forms\GameBoardUC.Designer.cs">
+      <DependentUpon>GameBoardUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LogUC.cs">
       <SubType>UserControl</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="Forms\DeckSelectionForm.resx">
       <DependentUpon>DeckSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\IntroductionUC.resx">
-      <DependentUpon>IntroductionUC.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\GameBoardUC.resx">
+      <DependentUpon>GameBoardUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LogUC.resx">
       <DependentUpon>LogUC.cs</DependentUpon>

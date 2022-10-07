@@ -2,9 +2,9 @@
 
 namespace HeadAndFoot.App.Forms
 {
-    public partial class IntroductionUC : UserControl
+    public partial class GameBoardUC : UserControl
     {
-        public IntroductionUC()
+        public GameBoardUC()
         {
             InitializeComponent();
 

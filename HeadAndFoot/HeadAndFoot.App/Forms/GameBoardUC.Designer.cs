@@ -1,7 +1,7 @@
 ﻿
 namespace HeadAndFoot.App.Forms
 {
-    partial class IntroductionUC
+    partial class GameBoardUC
     {
         /// <summary> 
         /// Required designer variable.
