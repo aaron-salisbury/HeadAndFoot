@@ -7,6 +7,8 @@ namespace HeadAndFoot.App.Forms
         public IntroductionUC()
         {
             InitializeComponent();
+
+            ShellForm.GameManager.NewDeal();
         }
     }
 }

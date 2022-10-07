@@ -13,16 +13,13 @@ namespace HeadAndFoot.App.Forms
         {
             InitializeComponent();
 
-            SetupAboutPage();
+            SetupAboutForm();
         }
 
-        private void SetupAboutPage()
+        private void SetupAboutForm()
         {
-            Size modalSize = new Size(MODAL_WIDTH, MODAL_HIGHT);
-            Size = modalSize;
-            MinimumSize = modalSize;
-            MaximumSize = modalSize;
-            SizeGripStyle = SizeGripStyle.Hide;
+            ShowIcon = false;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
 
             string appName = Properties.Settings.Default.ApplicationFriendlyName.Replace("&", "&&");
             string appVersion = Application.ProductVersion;

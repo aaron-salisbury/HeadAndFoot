@@ -14,7 +14,14 @@ namespace HeadAndFoot.App.Forms
         {
             InitializeComponent();
 
+            SetupDeckSelectionForm();
             SetupDeckPanel();
+        }
+
+        private void SetupDeckSelectionForm()
+        {
+            ShowIcon = false;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void SetupDeckPanel()
@@ -109,7 +116,7 @@ namespace HeadAndFoot.App.Forms
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

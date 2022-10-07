@@ -13,5 +13,10 @@ namespace HeadAndFoot.Core
             CardBackSprites = CRUD.ReadCardBackSprites();
 
         }
+
+        public void NewDeal()
+        {
+
+        }
     }
 }

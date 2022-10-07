@@ -24,9 +24,9 @@ namespace HeadAndFoot.App
             _logUC = new LogUC();
             EstablishLogging();
 
-            ModifyMenus();
-
             GameManager = new Manager();
+
+            ModifyMenus();
 
             MainContentPanel.Controls.Add(GetNewDeal());
         }
