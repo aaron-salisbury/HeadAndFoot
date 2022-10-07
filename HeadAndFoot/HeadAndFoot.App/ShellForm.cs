@@ -9,12 +9,7 @@ namespace HeadAndFoot.App
 {
     public partial class ShellForm : Form
     {
-        private Manager _gameManager;
-        public Manager GameManager
-        {
-            get { return _gameManager; }
-            set { _gameManager = value; }
-        }
+        public static Manager GameManager;
 
         private readonly Padding _defaultContentAreaPadding = new Padding(15);
         private readonly LogUC _logUC;
@@ -74,6 +69,16 @@ namespace HeadAndFoot.App
         {
             MainContentPanel.Controls.Clear();
             MainContentPanel.Controls.Add(GetNewDeal());
+        }
+
+        private void DeckMenuItem_Click(object sender, EventArgs e)
+        {
+            MainContentPanel.Controls.Clear();
+
+            Control deckContent = new DeckUC();
+            deckContent.Padding = _defaultContentAreaPadding;
+            deckContent.Dock = DockStyle.Fill;
+            MainContentPanel.Controls.Add(deckContent);
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)

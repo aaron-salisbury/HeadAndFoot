@@ -75,7 +75,7 @@ namespace HeadAndFoot.App
             // DealMenuItem
             // 
             this.DealMenuItem.Name = "DealMenuItem";
-            this.DealMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.DealMenuItem.Size = new System.Drawing.Size(180, 22);
             this.DealMenuItem.Text = "&Deal";
             this.DealMenuItem.Click += new System.EventHandler(this.DealMenuItem_Click);
             // 
@@ -83,25 +83,26 @@ namespace HeadAndFoot.App
             // 
             this.UndoMenuItem.Enabled = false;
             this.UndoMenuItem.Name = "UndoMenuItem";
-            this.UndoMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.UndoMenuItem.Size = new System.Drawing.Size(180, 22);
             this.UndoMenuItem.Text = "&Undo";
             // 
             // DeckMenuItem
             // 
             this.DeckMenuItem.Name = "DeckMenuItem";
-            this.DeckMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.DeckMenuItem.Size = new System.Drawing.Size(180, 22);
             this.DeckMenuItem.Text = "De&ck...";
+            this.DeckMenuItem.Click += new System.EventHandler(this.DeckMenuItem_Click);
             // 
             // OptionsMenuItem
             // 
             this.OptionsMenuItem.Name = "OptionsMenuItem";
-            this.OptionsMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.OptionsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.OptionsMenuItem.Text = "&Options...";
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.ExitMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ExitMenuItem.Text = "E&xit";
             this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 

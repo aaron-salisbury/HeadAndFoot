@@ -1,96 +1,81 @@
-﻿using System.Collections.Generic;
+﻿using HeadAndFoot.Core.Base.Logging;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace HeadAndFoot.Core.Data
 {
     internal static class CRUD
     {
-        private const string SPRITES_XML_FILEPATH = "HeadAndFoot.Core.Data.TexturePackerSprites.xml";
+        private const string SPRITE_ELEMENT_NAME = "sprite";
+        private const string CARD_BACKS_FILEPATH = "HeadAndFoot.Core.Data.Textures.cards-backs-data";
 
-        public static Dictionary<string, Image> ReadSprites()
+        public static Dictionary<string, System.Drawing.Image> ReadCardBackSprites()
         {
-            // www.codeproject.com/tips/451129/csharp-spritesheet-reader-parser
+            // Inspired by www.codeproject.com/tips/451129/csharp-spritesheet-reader-parser
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load(new StringReader(GetEmbeddedResourceText(SPRITES_XML_FILEPATH)));
-
-            XmlNode metadata = doc.SelectSingleNode("/plist/dict/key[.='metadata']");
-            XmlNode realTextureFileName = metadata.NextSibling.SelectSingleNode("key[.='realTextureFileName']");
-            string spritesheetName = realTextureFileName.NextSibling.InnerText;
-            Image spriteSheetImage = Image.FromFile(spritesheetName);
-            XmlNode frames = doc.SelectSingleNode("/plist/dict/key[.='frames']");
-            XmlNodeList list = frames.NextSibling.SelectNodes("key");
-
-            Dictionary<string, Image> sprites = new Dictionary<string, Image>(list.Count);
-
-            foreach (XmlNode node in list)
+            try
             {
-                XmlNode dict = node.NextSibling;
-                string strRectangle = dict.SelectSingleNode("key[.='frame']").NextSibling.InnerText;
-                string strOffset = dict.SelectSingleNode("key[.='offset']").NextSibling.InnerText;
-                string strSourceRect = dict.SelectSingleNode("key[.='sourceColorRect']").NextSibling.InnerText;
-                string strSourceSize = dict.SelectSingleNode("key[.='sourceSize']").NextSibling.InnerText;
+                Dictionary<string, System.Drawing.Image> sprites = new Dictionary<string, System.Drawing.Image>();
 
-                Rectangle frame = ParseRectangle(strRectangle);
-                Point offset = ParsePoint(strOffset);
-                Rectangle sourceRectangle = ParseRectangle(strSourceRect);
-                Point size = ParsePoint(strSourceSize);
+                string imagePath = string.Format("{0}.png", CARD_BACKS_FILEPATH);
+                string xmlPath = string.Format("{0}.xml", CARD_BACKS_FILEPATH);
 
-                Image sprite = new Bitmap(size.X, size.Y);
-                Graphics drawer = Graphics.FromImage(sprite);
-                drawer.DrawImage(spriteSheetImage, sourceRectangle, frame, GraphicsUnit.Pixel);
-                drawer.Save();
-                drawer.Dispose();
+                System.Drawing.Image spriteSheetImage = System.Drawing.Image.FromStream(GetResourceStream(imagePath));
 
-                sprites[node.InnerText] = sprite;
+                XmlTextReader reader = new XmlTextReader(new StringReader(GetEmbeddedResourceText(xmlPath)));
+                reader.ReadToFollowing(SPRITE_ELEMENT_NAME);
+
+                do
+                {
+                    string name = reader.GetAttribute("name");
+                    string xCoord = reader.GetAttribute("x");
+                    string yCoord = reader.GetAttribute("y");
+                    string w = reader.GetAttribute("w");
+                    string h = reader.GetAttribute("h");
+
+                    int x;
+                    int y;
+                    int width;
+                    int height;
+                    if (int.TryParse(xCoord, out x) && int.TryParse(yCoord, out y) && int.TryParse(w, out width) && int.TryParse(h, out height))
+                    {
+                        System.Drawing.Image sprite = new Bitmap(width, height);
+                        Graphics drawer = Graphics.FromImage(sprite);
+                        Rectangle destRect = new Rectangle(0, 0, width, height);
+                        Rectangle srcRect = new Rectangle(x, y, width, height);
+                        drawer.DrawImage(spriteSheetImage, destRect, srcRect, GraphicsUnit.Pixel);
+                        drawer.Save();
+                        drawer.Dispose();
+                        sprites[name] = sprite;
+                    }
+                } while (reader.ReadToFollowing(SPRITE_ELEMENT_NAME));
+
+                return sprites;
             }
-
-            return sprites;
+            catch (Exception e)
+            {
+                AppLogger.Write(string.Format("Failed to retrieve card back sprites: {0}", e.Message), AppLogger.LogCategories.Error);
+                return null;
+            }
         }
 
-        private static Rectangle ParseRectangle(string rectangle)
+        private static Stream GetResourceStream(string filename)
         {
-            Regex expression = new Regex(@"\{\{(\d+),(\d+)\},\{(\d+),(\d+)\}\}");
-            Match match = expression.Match(rectangle);
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            Stream resourceStream = assembly.GetManifestResourceStream(filename);
 
-            if (match.Success)
-            {
-                int x = int.Parse(match.Groups[1].Value);
-                int y = int.Parse(match.Groups[2].Value);
-                int w = int.Parse(match.Groups[3].Value);
-                int h = int.Parse(match.Groups[4].Value);
-
-                return new Rectangle(x, y, w, h);
-            }
-
-            return Rectangle.Empty;
-        }
-
-        private static Point ParsePoint(string point)
-        {
-            Regex expression = new Regex(@"\{(\d+),(\d+)\}");
-            Match match = expression.Match(point);
-
-            if (match.Success)
-            {
-                int x = int.Parse(match.Groups[1].Value);
-                int y = int.Parse(match.Groups[2].Value);
-
-                return new Point(x, y);
-            }
-
-            return Point.Empty;
+            return resourceStream;
         }
 
         private static string GetEmbeddedResourceText(string filename)
         {
             string result = string.Empty;
 
-            using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(filename))
+            using (Stream stream = GetResourceStream(filename))
             using (StreamReader streamReader = new StreamReader(stream))
             {
                 result = streamReader.ReadToEnd();
