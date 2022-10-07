@@ -11,7 +11,7 @@ namespace HeadAndFoot.App
     {
         public static Manager GameManager;
 
-        private readonly Padding _defaultContentAreaPadding = new Padding(15);
+        private readonly Padding _defaultContentAreaPadding = new Padding(5);
         private readonly LogUC _logUC;
 
         public ShellForm()
@@ -73,12 +73,10 @@ namespace HeadAndFoot.App
 
         private void DeckMenuItem_Click(object sender, EventArgs e)
         {
-            MainContentPanel.Controls.Clear();
-
-            Control deckContent = new DeckUC();
-            deckContent.Padding = _defaultContentAreaPadding;
-            deckContent.Dock = DockStyle.Fill;
-            MainContentPanel.Controls.Add(deckContent);
+            using (DeckSelectionForm deckSelectionForm = new DeckSelectionForm())
+            {
+                deckSelectionForm.ShowDialog(this);
+            }
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)

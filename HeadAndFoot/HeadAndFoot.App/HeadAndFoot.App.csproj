@@ -82,11 +82,11 @@
     <Compile Include="Forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DeckUC.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\DeckSelectionForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DeckUC.Designer.cs">
-      <DependentUpon>DeckUC.cs</DependentUpon>
+    <Compile Include="Forms\DeckSelectionForm.Designer.cs">
+      <DependentUpon>DeckSelectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IntroductionUC.cs">
       <SubType>UserControl</SubType>
@@ -112,8 +112,8 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DeckUC.resx">
-      <DependentUpon>DeckUC.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DeckSelectionForm.resx">
+      <DependentUpon>DeckSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IntroductionUC.resx">
       <DependentUpon>IntroductionUC.cs</DependentUpon>
