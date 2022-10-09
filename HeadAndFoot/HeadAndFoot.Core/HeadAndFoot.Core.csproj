@@ -52,16 +52,11 @@
     <Compile Include="Base\Logging\AppLogger.cs" />
     <Compile Include="Base\Logging\InvocableInMemoryTraceListener.cs" />
     <Compile Include="Base\ValidatableModel.cs" />
-    <Compile Include="Data\CRUD.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Data\Textures\cards-backs-data.png" />
-    <EmbeddedResource Include="Data\Textures\cards-backs-data.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

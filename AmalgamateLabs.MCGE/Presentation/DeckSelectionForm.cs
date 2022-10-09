@@ -1,27 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
-namespace HeadAndFoot.App.Forms
+namespace AmalgamateLabs.MCGE.Presentation
 {
     public partial class DeckSelectionForm : Form
     {
         private const int IMAGE_MARGIN = 1;
 
-        public DeckSelectionForm()
+        private Dictionary<string, Image> _cardBackSprites;
+
+        public DeckSelectionForm(Dictionary<string, Image> backs)
         {
             InitializeComponent();
 
-            SetupDeckSelectionForm();
-            SetupDeckPanel();
+            _cardBackSprites = backs;
+
+            Setup();
         }
 
-        private void SetupDeckSelectionForm()
+        private void Setup()
         {
             ShowIcon = false;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+
+            SetupDeckPanel();
         }
 
         private void SetupDeckPanel()
@@ -51,9 +59,9 @@ namespace HeadAndFoot.App.Forms
             {
                 for (int column = 0; column < DeckTLP.ColumnCount; column++)
                 {
-                    if (index < ShellForm.GameManager.CardBackSprites.Count)
+                    if (index < _cardBackSprites.Count)
                     {
-                        KeyValuePair<string, Image> deckBackImageByName = ShellForm.GameManager.CardBackSprites.ElementAt(index++);
+                        KeyValuePair<string, Image> deckBackImageByName = _cardBackSprites.ElementAt(index++);
 
                         Button deckBack = new Button();
                         deckBack.Tag = deckBackImageByName.Key;
@@ -82,7 +90,7 @@ namespace HeadAndFoot.App.Forms
                 }
             }
 
-            SetRowAndColumnStyles(ShellForm.GameManager.CardBackSprites.Count, largestHeight, largestWidth);
+            SetRowAndColumnStyles(_cardBackSprites.Count, largestHeight, largestWidth);
 
             DeckTLP.ResumeLayout(true);
         }

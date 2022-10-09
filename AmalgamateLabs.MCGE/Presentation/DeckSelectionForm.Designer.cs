@@ -1,4 +1,5 @@
-﻿namespace HeadAndFoot.App.Forms
+﻿
+namespace AmalgamateLabs.MCGE.Presentation
 {
     partial class DeckSelectionForm
     {
@@ -79,7 +80,6 @@
             this.Controls.Add(this.BtnOk);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.DeckTLP);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(479, 298);
             this.Name = "DeckSelectionForm";
             this.Text = "Select Card Back";

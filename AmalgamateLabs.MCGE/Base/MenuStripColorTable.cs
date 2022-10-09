@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace HeadAndFoot.App.Base
+namespace AmalgamateLabs.MCGE.Base
 {
     internal class MenuStripColorTable : ProfessionalColorTable
     {

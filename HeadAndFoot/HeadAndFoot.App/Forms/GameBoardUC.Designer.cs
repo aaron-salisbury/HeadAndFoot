@@ -31,14 +31,12 @@ namespace HeadAndFoot.App.Forms
         {
             this.SuspendLayout();
             // 
-            // IntroductionUC
+            // GameBoardUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Green;
-            this.Name = "IntroductionUC";
-            this.Size = new System.Drawing.Size(785, 400);
+            this.Name = "GameBoardUC";
             this.ResumeLayout(false);
 
         }

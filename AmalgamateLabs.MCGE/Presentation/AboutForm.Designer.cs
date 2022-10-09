@@ -1,5 +1,5 @@
 ﻿
-namespace HeadAndFoot.App.Forms
+namespace AmalgamateLabs.MCGE.Presentation
 {
     partial class AboutForm
     {
@@ -122,7 +122,6 @@ namespace HeadAndFoot.App.Forms
             // LogoPictureBox
             // 
             this.LogoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.LogoPictureBox.BackgroundImage = global::HeadAndFoot.App.Properties.Resources.logo_32;
             this.LogoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoPictureBox.ErrorImage = null;
             this.LogoPictureBox.InitialImage = null;
@@ -147,7 +146,6 @@ namespace HeadAndFoot.App.Forms
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.AppLink);
             this.Controls.Add(this.AppDescriptionLabel);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(348, 283);
             this.MinimizeBox = false;

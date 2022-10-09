@@ -1,4 +1,10 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
 
 namespace HeadAndFoot.App.Forms
 {
@@ -7,8 +13,6 @@ namespace HeadAndFoot.App.Forms
         public GameBoardUC()
         {
             InitializeComponent();
-
-            ShellForm.GameManager.NewDeal();
         }
     }
 }
