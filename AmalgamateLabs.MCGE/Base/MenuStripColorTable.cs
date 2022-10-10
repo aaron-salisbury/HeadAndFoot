@@ -13,106 +13,67 @@ namespace AmalgamateLabs.MCGE.Base
 
         public override Color ToolStripDropDownBackground
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
 
         public override Color ImageMarginGradientBegin
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
 
         public override Color ImageMarginGradientMiddle
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
 
         public override Color ImageMarginGradientEnd
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
 
         public override Color MenuBorder
         {
-            get
-            {
-                return System.Drawing.SystemColors.ControlDark;
-            }
+            get { return System.Drawing.SystemColors.ControlDark; }
         }
 
         public override Color MenuItemBorder
         {
-            get
-            {
-                return System.Drawing.Color.Transparent;
-            }
+            get { return System.Drawing.Color.Transparent; }
         }
 
         public override Color MenuItemSelected
         {
-            get
-            {
-                return MENU_ITEMS_HOVER_COLOR;
-            }
+            get { return MENU_ITEMS_HOVER_COLOR; }
         }
 
         public override Color MenuStripGradientBegin
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
 
         public override Color MenuStripGradientEnd
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
 
         public override Color MenuItemSelectedGradientBegin
         {
-            get
-            {
-                return MENU_TOP_HOVER_COLOR;
-            }
+            get { return MENU_TOP_HOVER_COLOR; }
         }
 
         public override Color MenuItemSelectedGradientEnd
         {
-            get
-            {
-                return MENU_TOP_HOVER_COLOR;
-            }
+            get { return MENU_TOP_HOVER_COLOR; }
         }
 
         public override Color MenuItemPressedGradientBegin
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
 
         public override Color MenuItemPressedGradientEnd
         {
-            get
-            {
-                return MENU_COLOR;
-            }
+            get { return MENU_COLOR; }
         }
     }
 }
