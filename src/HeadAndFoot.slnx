@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="HeadAndFoot.Business/HeadAndFoot.Business.csproj" Id="4b4c50f2-52d9-4b21-b911-92d1af1475f8" />
+  <Project Path="HeadAndFoot.DesktopApp/HeadAndFoot.DesktopApp.csproj" Id="8f58fb77-d41d-4f7b-a4fe-6ac8e0a8af48" />
+  <Project Path="HeadAndFoot.Tests/HeadAndFoot.Tests.csproj" Id="d2cc4181-ad8e-4d5b-9bc8-c363e7c68773" />
+</Solution>
