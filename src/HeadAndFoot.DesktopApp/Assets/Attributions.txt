@@ -1,0 +1,6 @@
+Playing card art (faces, jokers, and back) is original to Head and Foot. It is drawn by tools/CardArt/New-CardArt.ps1 in the project repository, in the spirit of classic desktop card games, without copying any existing card artwork.
+
+Application icons are original artwork by Aaron Salisbury.
+
+Game rules follow "Hand and Foot" as published by Official Game Rules:
+https://officialgamerules.org/game-rules/hand-and-foot/
