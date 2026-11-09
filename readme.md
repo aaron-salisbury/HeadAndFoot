@@ -1,3 +1,5 @@
+![Head & Foot](./brand/logo_100.png)
+
 # Head and Foot
 
 Head and Foot is a small, 1v1, implementation of the like-named card game. Inspired by classic Windows Solitaire.
